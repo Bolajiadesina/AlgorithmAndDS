@@ -15,7 +15,7 @@ public class RemoveArray {
             if (numb==2){
                 iterator.remove();
             }
-            System.out.println("iterator"+ iterator);
+            System.out.println("iterator"+ iterator.toString());
 
        }
 
