@@ -16,9 +16,11 @@ public class IncreaseArraySize {
 
             }
 
-                arr= temp;
+            // for(int j=0; j<temp.length;j++){
+            //     System.out.println(temp[j]);
+            // }
             System.out.println(arr);
-                return arr;
+                return temp;
 
         }
 
