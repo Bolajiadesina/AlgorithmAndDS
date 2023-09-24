@@ -44,24 +44,38 @@ public class SinglyLinkedList {
         return count;
 
     }
+
+
+    public void insertFirst(int value){
+        ListNode newNode=new ListNode(value);
+        newNode.next= head;
+        head= newNode;
+    }
     
     public static void main(String[] args) {
         SinglyLinkedList sLinkedList = new SinglyLinkedList();
 
         // create valies for the chain
 
-        sLinkedList.head = new ListNode(10);
-        ListNode second = new ListNode(1);
-        ListNode third = new ListNode(8);
-        ListNode fourth = new ListNode(11);
+        // sLinkedList.head = new ListNode(10);
+        // ListNode second = new ListNode(1);
+        // ListNode third = new ListNode(8);
+        // ListNode fourth = new ListNode(11);
 
-        // now we connect them together
-        sLinkedList.head.next = second; // 10 ----> 1
-        second.next = third;// 10 ---->8 --->1
-        third.next = fourth;// 11
-        sLinkedList.printSindlyLinkedList();
+        // // now we connect them together
+        // sLinkedList.head.next = second; // 10 ----> 1
+        // second.next = third;// 10 ---->8 --->1
+        // third.next = fourth;// 11
+        // sLinkedList.printSindlyLinkedList();
 
-        System.out.println("Length is --- "+ sLinkedList.lenght());
+        // System.out.println("Length is --- "+ sLinkedList.lenght());
+  
+            sLinkedList.insertFirst(11);
+             sLinkedList.insertFirst(8);
+              sLinkedList.insertFirst(1);
+  
+  
+  
     }
 
 }
