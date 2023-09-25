@@ -52,6 +52,20 @@ public class AddNodeToSinglyList {
         newNode.next= head;
         head= newNode;
     }
+
+    public void insertEnd(int value){
+        ListNode newNode= new ListNode(value);
+        if(head== null){
+            head=newNode;
+            return;
+        }
+        ListNode current= head;
+        while(null != current.next){
+            current= current.next;
+        }
+
+        current.next= newNode;
+    }
     
     public static void main(String[] args) {
         SinglyLinkedList sLinkedList = new SinglyLinkedList();
