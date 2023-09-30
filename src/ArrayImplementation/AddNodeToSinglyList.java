@@ -123,6 +123,8 @@ public class AddNodeToSinglyList {
         sLinkedList.insert_(2, 5);
         sLinkedList.insert_(1, 2);
         sLinkedList.insert_(2, 4);
+        
+       System.out.println((sLinkedList.deleteFirst().data)); ;
   
     }
 }
