@@ -16,7 +16,7 @@ public class AddNodeToSinglyList {
 
     }
 
-    private void printSindlyLinkedList() {
+    private void display() {
 
         ListNode current = head;
         while (current != null) {
@@ -114,6 +114,28 @@ public class AddNodeToSinglyList {
         return current;
      }
 
+     public void delete(int position){
+        //possition is valid and starting from 1
+        // 3 --> 4 --> 7 --> 8 -->9 ---> null
+        if(position==1){
+            head= head.next;
+        }else{
+            ListNode previous= head;
+            int count=1;
+            while(count < position-1){
+                previous= previous.next;
+                count++;
+            }
+
+            ListNode current= previous.next;
+            previous.next= current.next;
+        }
+
+
+
+
+     }
+
     public static void main(String[] args) {
         AddNodeToSinglyList sLinkedList = new AddNodeToSinglyList();
 
@@ -140,8 +162,11 @@ public class AddNodeToSinglyList {
         sLinkedList.insert_(2, 5);
         sLinkedList.insert_(1, 2);
         sLinkedList.insert_(2, 4);
+         sLinkedList.insert_(5, 7);
         
-       System.out.println((sLinkedList.deleteFirst().data)); ;
-  
+      // System.out.println((sLinkedList.deleteFirst().data)); ;
+       sLinkedList.delete(2);
+       sLinkedList.display();
+
     }
 }
