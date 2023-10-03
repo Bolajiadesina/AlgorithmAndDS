@@ -86,55 +86,69 @@ public class AddNodeToSinglyList {
 
         current.next = newNode;
     }
-     public ListNode deleteFirst(){
-        if(head== null){
+
+    public ListNode deleteFirst() {
+        if (head == null) {
             return null;
         }
-        ListNode temp= head;
-        head= head.next;
-        temp.next= null;
+        ListNode temp = head;
+        head = head.next;
+        temp.next = null;
 
         return temp;
-     }
+    }
 
-     public ListNode deleteLast(){
-        if(head==null || head.next== null){
+    public ListNode deleteLast() {
+        if (head == null || head.next == null) {
             return head;
         }
 
-        ListNode current= head;
+        ListNode current = head;
         ListNode previous = null;
 
-        while(current.next != null){
+        while (current.next != null) {
             previous = current;
-            current= current.next;
+            current = current.next;
 
         }
-        previous.next= null;
+        previous.next = null;
         return current;
-     }
+    }
 
-     public void delete(int position){
-        //possition is valid and starting from 1
+    public void delete(int position) {
+        // possition is valid and starting from 1
         // 3 --> 4 --> 7 --> 8 -->9 ---> null
-        if(position==1){
-            head= head.next;
-        }else{
-            ListNode previous= head;
-            int count=1;
-            while(count < position-1){
-                previous= previous.next;
+        if (position == 1) {
+            head = head.next;
+        } else {
+            ListNode previous = head;
+            int count = 1;
+            while (count < position - 1) {
+                previous = previous.next;
                 count++;
             }
 
-            ListNode current= previous.next;
-            previous.next= current.next;
+            ListNode current = previous.next;
+            previous.next = current.next;
+        }
+    }
+
+    public boolean searchElement(ListNode head, int searchKey) {
+        if (head == null) {
+            return false;
         }
 
+        ListNode current = head;
+        while (current != null) {
+            if (current.data == searchKey) {
 
+                return true;
+            }
+            current = current.next;
 
-
-     }
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         AddNodeToSinglyList sLinkedList = new AddNodeToSinglyList();
@@ -153,20 +167,20 @@ public class AddNodeToSinglyList {
         // sLinkedList.printSindlyLinkedList();
 
         // System.out.println("Length is --- "+ sLinkedList.lenght());
-  
-            // sLinkedList.insertFirst(11);
-            //  sLinkedList.insertFirst(8);
-            //   sLinkedList.insertFirst(1);
-  
+
+        // sLinkedList.insertFirst(11);
+        // sLinkedList.insertFirst(8);
+        // sLinkedList.insertFirst(1);
+
         sLinkedList.insert_(1, 3);
         sLinkedList.insert_(2, 5);
         sLinkedList.insert_(1, 2);
         sLinkedList.insert_(2, 4);
-         sLinkedList.insert_(5, 7);
-        
-      // System.out.println((sLinkedList.deleteFirst().data)); ;
-       sLinkedList.delete(2);
-       sLinkedList.display();
+        sLinkedList.insert_(5, 7);
+
+        // System.out.println((sLinkedList.deleteFirst().data)); ;
+        sLinkedList.delete(2);
+        sLinkedList.display();
 
     }
 }
