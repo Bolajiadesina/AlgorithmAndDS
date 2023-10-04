@@ -150,15 +150,29 @@ public class AddNodeToSinglyList {
         return false;
     }
 
+
+    public void insertNode(ListNode newNode){
+        ListNode current= head;
+        ListNode temp= null;
+        while(current !=null && current.data <newNode.data){
+             temp= current;
+        current = current.next;
+        }
+        newNode.next= current;
+        temp.next= newNode;
+        System.out.println(head);
+       
+    }
+
     public static void main(String[] args) {
         AddNodeToSinglyList sLinkedList = new AddNodeToSinglyList();
 
         // create valies for the chain
 
-        // sLinkedList.head = new ListNode(10);
-        // ListNode second = new ListNode(1);
-        // ListNode third = new ListNode(8);
-        // ListNode fourth = new ListNode(11);
+        sLinkedList.head = new ListNode(10);
+        ListNode second = new ListNode(1);
+        ListNode third = new ListNode(8);
+        ListNode fourth = new ListNode(11);
 
         // // now we connect them together
         // sLinkedList.head.next = second; // 10 ----> 1
@@ -172,15 +186,17 @@ public class AddNodeToSinglyList {
         // sLinkedList.insertFirst(8);
         // sLinkedList.insertFirst(1);
 
-        sLinkedList.insert_(1, 3);
-        sLinkedList.insert_(2, 5);
-        sLinkedList.insert_(1, 2);
-        sLinkedList.insert_(2, 4);
-        sLinkedList.insert_(5, 7);
+        // sLinkedList.insert_(1, 3);
+        // sLinkedList.insert_(2, 5);
+        // sLinkedList.insert_(1, 2);
+        // sLinkedList.insert_(2, 4);
+        // sLinkedList.insert_(5, 7);
 
         // System.out.println((sLinkedList.deleteFirst().data)); ;
         sLinkedList.delete(2);
         sLinkedList.display();
+
+       // sLinkedList.insertNode();
 
     }
 }
