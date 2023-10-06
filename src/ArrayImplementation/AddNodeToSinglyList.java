@@ -150,18 +150,39 @@ public class AddNodeToSinglyList {
         return false;
     }
 
-
-    public void insertNode(ListNode newNode){
-        ListNode current= head;
-        ListNode temp= null;
-        while(current !=null && current.data <newNode.data){
-             temp= current;
-        current = current.next;
+    public void insertNode(ListNode newNode) {
+        ListNode current = head;
+        ListNode temp = null;
+        while (current != null && current.data < newNode.data) {
+            temp = current;
+            current = current.next;
         }
-        newNode.next= current;
-        temp.next= newNode;
+        newNode.next = current;
+        temp.next = newNode;
         System.out.println(head);
-       
+
+    }
+
+    public void deleteNode(int key) {
+        ListNode current = head;
+        ListNode temp = null;
+
+        if (current != null && current.data == key) {
+            head = current.next;
+            return;
+        }
+
+        while (current != null && current.data != key) {
+            temp = current;
+            current = current.next;
+        }
+
+
+        if(current == null){
+            return;
+        }
+
+        temp.next = current.next;
     }
 
     public static void main(String[] args) {
@@ -193,10 +214,11 @@ public class AddNodeToSinglyList {
         // sLinkedList.insert_(5, 7);
 
         // System.out.println((sLinkedList.deleteFirst().data)); ;
-        sLinkedList.delete(2);
+        //sLinkedList.delete(2);
+        sLinkedList.deleteNode(11);
         sLinkedList.display();
 
-       // sLinkedList.insertNode();
+        // sLinkedList.insertNode();
 
     }
 }
