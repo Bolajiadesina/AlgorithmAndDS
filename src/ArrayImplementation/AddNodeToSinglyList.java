@@ -185,15 +185,47 @@ public class AddNodeToSinglyList {
         temp.next = current.next;
     }
 
+    public boolean containsLoop(){
+        ListNode fastPtr= head;
+        ListNode slowPtr= head;
+
+        while(fastPtr!= null && slowPtr!= null){
+            if(slowPtr==fastPtr){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void createAloopLinkedList(){
+        ListNode first= new ListNode(1);
+        ListNode second= new ListNode(2);
+        ListNode third= new ListNode(3);
+        ListNode fourth= new ListNode(4);
+        ListNode fifth= new ListNode(5);
+        ListNode sixth= new ListNode(6);
+
+
+
+        head= first;
+        first.next=second;
+        second.next= third;
+        third.next=fourth;
+        fourth.next=fifth;
+        fifth.next= sixth;
+        sixth.next= third;
+    }
+
+
     public static void main(String[] args) {
-        AddNodeToSinglyList sLinkedList = new AddNodeToSinglyList();
+     AddNodeToSinglyList sLinkedList = new AddNodeToSinglyList();
 
-        // create valies for the chain
+        // // create valies for the chain
 
-        sLinkedList.head = new ListNode(10);
-        ListNode second = new ListNode(1);
-        ListNode third = new ListNode(8);
-        ListNode fourth = new ListNode(11);
+        // sLinkedList.head = new ListNode(10);
+        // ListNode second = new ListNode(1);
+        // ListNode third = new ListNode(8);
+        // ListNode fourth = new ListNode(11);
 
         // // now we connect them together
         // sLinkedList.head.next = second; // 10 ----> 1
@@ -215,10 +247,12 @@ public class AddNodeToSinglyList {
 
         // System.out.println((sLinkedList.deleteFirst().data)); ;
         //sLinkedList.delete(2);
-        sLinkedList.deleteNode(11);
-        sLinkedList.display();
+        // sLinkedList.deleteNode(11);
+        // sLinkedList.display();
 
         // sLinkedList.insertNode();
+        sLinkedList.createAloopLinkedList();
+        System.out.println(sLinkedList.containsLoop());
 
     }
 }
