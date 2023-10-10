@@ -216,6 +216,35 @@ public class AddNodeToSinglyList {
         sixth.next= third;
     }
 
+      public ListNode startNodeInALoop(){
+        ListNode fastPtr= head;
+        ListNode slowPtr= head;
+
+        while(fastPtr!= null && fastPtr.next != null){
+          fastPtr= fastPtr.next.next;
+          slowPtr= slowPtr.next;
+            if(slowPtr==fastPtr){
+                return getStartingNode(slowPtr);
+            }
+        }
+        return null;
+    }
+
+    private ListNode getStartingNode(ListNode slowPtr){
+
+
+        ListNode temp= head;
+        while(temp != slowPtr){
+            temp= temp.next;
+            slowPtr= slowPtr.next;
+        }
+
+        return temp;
+    }
+
+
+
+
 
     public static void main(String[] args) {
      AddNodeToSinglyList sLinkedList = new AddNodeToSinglyList();
