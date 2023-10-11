@@ -282,6 +282,6 @@ public class AddNodeToSinglyList {
         // sLinkedList.insertNode();
         sLinkedList.createAloopLinkedList();
         System.out.println(sLinkedList.containsLoop());
-
+        System.out.println(sLinkedList.startNodeInALoop().data);
     }
 }
