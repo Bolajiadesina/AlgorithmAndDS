@@ -242,6 +242,29 @@ public class AddNodeToSinglyList {
         return temp;
     }
 
+     public void removeLoop(){
+        ListNode fastPtr= head;
+        ListNode slowPtr= head;
+
+        while(fastPtr!= null && fastPtr.next != null){
+          fastPtr= fastPtr.next.next;
+          slowPtr= slowPtr.next;
+            if(slowPtr==fastPtr){
+              removeLoop(slowPtr);
+              return;
+            }
+        }
+       
+    }
+
+    private void removeLoop(ListNode slowPtr){
+         ListNode temp= head;
+        while(temp.next != slowPtr.next){
+            temp= temp.next;
+            slowPtr= slowPtr.next;
+        }
+        slowPtr.next=null;
+    }
 
 
 
@@ -283,5 +306,7 @@ public class AddNodeToSinglyList {
         sLinkedList.createAloopLinkedList();
         System.out.println(sLinkedList.containsLoop());
         System.out.println(sLinkedList.startNodeInALoop().data);
+        sLinkedList.removeLoop();
+        sLinkedList.display();
     }
 }
