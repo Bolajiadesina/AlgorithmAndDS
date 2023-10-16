@@ -303,10 +303,10 @@ public class AddNodeToSinglyList {
         // sLinkedList.display();
 
         // sLinkedList.insertNode();
-        sLinkedList.createAloopLinkedList();
-        System.out.println(sLinkedList.containsLoop());
-        System.out.println(sLinkedList.startNodeInALoop().data);
-        sLinkedList.removeLoop();
-        sLinkedList.display();
+        // sLinkedList.createAloopLinkedList();
+        // System.out.println(sLinkedList.containsLoop());
+        // System.out.println(sLinkedList.startNodeInALoop().data);
+        // sLinkedList.removeLoop();
+        // sLinkedList.display();
     }
 }
