@@ -257,14 +257,14 @@ public class AddNodeToSinglyList {
        
     }
 
-    private void removeLoop(ListNode slowPtr){
-         ListNode temp= head;
-        while(temp.next != slowPtr.next){
-            temp= temp.next;
-            slowPtr= slowPtr.next;
-        }
-        slowPtr.next=null;
-    }
+    // private void removeLoop(ListNode slowPtr){
+    //      ListNode temp= head;
+    //     while(temp.next != slowPtr.next){
+    //         temp= temp.next;
+    //         slowPtr= slowPtr.next;
+    //     }
+    //     slowPtr.next=null;
+    // }
 
 
 
