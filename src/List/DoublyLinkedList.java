@@ -43,6 +43,7 @@ public class DoublyLinkedList<ListNode> {
     }
 
     public static void main(String[] args) {
-        
+        DoublyLinkedList d= new DoublyLinkedList();
+        d.display();
     }
 }
