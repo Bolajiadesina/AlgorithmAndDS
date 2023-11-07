@@ -41,9 +41,58 @@ public class DoublyLinkedList<ListNode> {
         }
         System.out.println("null");
     }
+        public void insertlast(int value){
+            ListNode newNode= new ListNode(value);
+            if(isEmpty()){
+                head= newNode;
+            }else{
+                tail.next= newNode;
+            }
+            newNode.previous = tail;
+            tail= newNode;
+            lenght++;
+        }
+
+
+
+    public void displayForwrd(){
+       if(head == null){
+            return;
+       } 
+
+       ListNode temp= head;
+       while(temp != null){
+        System.out.print(temp.data + "  -->  ");
+        temp=temp.next;
+
+       }
+       System.out.println("null");
+    }
+    public void displayBackward(){
+       if(tail == null){
+            return;
+       } 
+
+       ListNode temp= tail;
+       while(temp != null){
+        System.out.print(temp.data + "  -->  ");
+        temp=temp.previous;
+
+       }
+       System.out.println("null");
+    }
+
+
+
 
     public static void main(String[] args) {
         DoublyLinkedList d= new DoublyLinkedList();
         d.display();
+        d.insertlast(1);
+         d.insertlast(10);
+          d.insertlast(15);
+           d.insertlast(25);
+
+           d.displayForwrd();
     }
 }
