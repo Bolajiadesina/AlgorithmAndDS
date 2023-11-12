@@ -1,4 +1,4 @@
-package com.portfolio.bolaji.java8;
+package play;
 
 import java.util.Arrays;
 import java.util.List;
