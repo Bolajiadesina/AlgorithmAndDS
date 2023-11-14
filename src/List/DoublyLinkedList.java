@@ -96,18 +96,32 @@ public class DoublyLinkedList<ListNode> {
 
   }
 
+  public void insertlast2(int value){
+    ListNode newNode= new ListNode(value);
+        if(isEmpty()){
+            head= newNode;
+        }else{
+            tail.next= newNode;
+            newNode.previous=tail;
+        }
+        tail= newNode;
+        lenght++;
+
+
+  }
+
 
 
     public static void main(String[] args) {
         DoublyLinkedList d= new DoublyLinkedList();
-        // d.display();
-        // d.insertlast(1);
-        //  d.insertlast(10);
-        //   d.insertlast(15);
-        //    d.insertlast(25);
+        d.display();
+        d.insertlast(1);
+         d.insertlast(10);
+          d.insertlast(15);
+           d.insertlast(25);
 
-        //    d.displayForwrd();
-        //    d.displayBackward();
+           d.displayForwrd();
+           d.displayBackward();
 
 
     }
