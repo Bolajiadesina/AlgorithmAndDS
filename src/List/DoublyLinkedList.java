@@ -110,6 +110,24 @@ public class DoublyLinkedList<ListNode> {
 
   }
 
+  public ListNode deletefirstNode(){
+    if(isEmpty()){
+        //throw new NoSuchElementException();
+    }
+
+    ListNode temp = head;
+    if(head ==tail){
+        tail = null;
+    }else{
+        head.next.previous= null;
+
+    }
+    head = head.next;
+    temp.next= null;
+    return temp;
+
+  }
+
 
 
     public static void main(String[] args) {
