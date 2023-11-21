@@ -128,6 +128,24 @@ public class DoublyLinkedList<ListNode> {
 
   }
 
+  public ListNode deletelastNode(){
+    if(isEmpty()){
+        //throw new NoSuchElementException();
+    }
+
+    ListNode temp = head;
+    if(head ==tail){
+        head = null;
+    }else{
+        tail.previous.next= null;
+
+    }
+    tail = tail.previous;
+    temp.previous= null;
+    return temp;
+
+  }
+
 
 
     public static void main(String[] args) {
