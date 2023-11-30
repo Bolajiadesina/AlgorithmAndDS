@@ -1,4 +1,4 @@
-package com.portfolio.bolaji.algorithm;
+package play;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.portfolio.bolaji.algorithm;
+package play;
 
 
 public class Palindrome {
