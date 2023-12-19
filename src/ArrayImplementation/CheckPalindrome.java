@@ -22,10 +22,22 @@ public class CheckPalindrome {
         return false;
     }
 
+    private static void test(){
+        String map_t= "romeo";
+
+        String reva="";
+        for(int i= map_t.length()-1; i>=0; i--){
+            reva=reva+ map_t.charAt(i) ;
+
+        }
+        System.out.println(reva);
+    }
+
 
 
     public static void main(String[] args) {
-        System.out.println(check());
+        //System.out.println(check());
+        test();
     }
 
 

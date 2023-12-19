@@ -59,6 +59,7 @@ public class ExecuteArray {
              ) {
             if(words.contains("b")) {
                 char [] b;
+                 System.out.println(words);
                 b=words.toCharArray();
                 int nub=b.length;
                 System.out.println(nub);
