@@ -21,11 +21,11 @@ public class RotateArray {
         System.arraycopy(result, 0, nums, 0, nums.length);
     }
 
-    // public static void main(String[] args) {
-    //     int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
-    //     int kp = 3;
+    public static void main(String[] args) {
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+        int kp = 3;
 
-    //     rotate(arr, kp);
+        rotate(arr, kp);
 
-    // }
+    }
 }
