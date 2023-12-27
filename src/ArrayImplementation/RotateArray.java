@@ -68,11 +68,11 @@ public class RotateArray {
 
     public static void main(String[] args) {
         RotateArray rotateArray = new RotateArray();
-        // int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
-        // int kp = 3;
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+        int kp = 3;
 
-        // rotateArray.rotate(arr, kp);
-        rotateArray.check();
+        rotateArray.rotate(arr, kp);
+        //rotateArray.check();
 
     }
 }
