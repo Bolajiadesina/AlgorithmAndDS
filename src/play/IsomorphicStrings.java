@@ -52,15 +52,15 @@ public class IsomorphicStrings {
     }
 
 
-    public void pali(){
-        String vrd="madam";
-        String tx= "";
-        for(int i= vrd.length()-1; i>=0; i-- ){
-                tx=tx+vrd.charAt(i);
-            System.out.println(tx);
+    // public void pali(){
+    //     String vrd="madam";
+    //     String tx= "";
+    //     for(int i= vrd.length()-1; i>=0; i-- ){
+    //             tx=tx+vrd.charAt(i);
+    //         System.out.println(tx);
 
-        }
-    }
+    //     }
+    // }
     public static void main(String[] args) {
         IsomorphicStrings is= new IsomorphicStrings();
         //       is.pali();
