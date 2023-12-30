@@ -21,6 +21,7 @@ public class IsomorphicStrings {
             return false;
         if (s.length() == 0 && t.length() == 0)
             return true;
+           
 
         HashMap<Character, Character> map = new HashMap<Character, Character>();
 
@@ -52,18 +53,10 @@ public class IsomorphicStrings {
     }
 
 
-    // public void pali(){
-    //     String vrd="madam";
-    //     String tx= "";
-    //     for(int i= vrd.length()-1; i>=0; i-- ){
-    //             tx=tx+vrd.charAt(i);
-    //         System.out.println(tx);
-
-    //     }
-    // }
     public static void main(String[] args) {
         IsomorphicStrings is= new IsomorphicStrings();
-        //       is.pali();
+        
+      System.out.println(is.isIsomorphic("ada", "egg"));
     }
 
 }
