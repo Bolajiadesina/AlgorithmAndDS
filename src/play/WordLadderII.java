@@ -1,7 +1,5 @@
 package play;
 
-
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -11,6 +9,24 @@ import java.util.logging.Logger;
 
 public class WordLadderII {
     Logger logger = Logger.getLogger(getClass().getName());
+
+    /*
+     * Given two words (start and end), and a dictionary, find all shortest
+     * transformation
+     * sequence(s) from start to end, such that: 1) Only one letter can be changed
+     * at a time,
+     * 2) Each intermediate word must exist in the dictionary.
+     * For example, given: start = "hit", end = "cog", and dict =
+     * ["hot","dot","dog","lot","log"],
+     * return:
+     * [
+     * ["hit","hot","dot","dog","cog"],
+     * ["hit","hot","lot","log","cog"]
+     * ]
+     * 
+     * 
+     * 
+     */
 
     public List<List<String>> findLadders(String start, String end,
             Set<String> dict) {
