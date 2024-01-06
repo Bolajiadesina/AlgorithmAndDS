@@ -52,4 +52,11 @@ public class MedianOfTwoArray {
         }
         return findKth(A, B, k, aStart, aEnd, bStart, bEnd);
     }
+    
+
+
+    public static void main(String[] args) {
+        MedianOfTwoArray me= new MedianOfTwoArray()
+        
+    }
 }
