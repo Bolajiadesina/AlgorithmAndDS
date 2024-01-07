@@ -56,7 +56,10 @@ public class MedianOfTwoArray {
 
 
     public static void main(String[] args) {
-        MedianOfTwoArray me= new MedianOfTwoArray()
-        
+        MedianOfTwoArray me= new MedianOfTwoArray();
+        int a []= {1,2,3,4,5,6};
+         int b []= {4,5,6,7,8,9,10};
+       Double ans= me.findMedianSortedArrays(a,b);
+        System.out.println(ans);
     }
 }
