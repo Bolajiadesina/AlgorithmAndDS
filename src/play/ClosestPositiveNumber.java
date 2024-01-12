@@ -16,27 +16,25 @@ public class ClosestPositiveNumber {
      * 
      */
 
-    public  Double findClosest(Double[] a) {
+    public Double findClosest(Double[] a) {
         double result = 0;
 
         double latest = 0;
 
-        for (int i = 0; i <a.length; i++) {
-            logger.info("i== "+a[i]);
+        for (int i = 0; i < a.length; i++) {
+           
             if (Math.abs(a[i]) > Math.abs(0.0)) {
 
-                if (Math.abs(a[i]) > Math.abs(0.0)) {
-                
+                if (Math.abs(a[i]) < latest) {
+                    result = a[i];
+                    latest = result;
+                }
 
-                result = a[i];
-            }
-                result = a[i];
             }
 
-            logger.info("result "+result);
+            logger.info("result " + result);
         }
 
-         
         return result;
     }
 
@@ -45,8 +43,8 @@ public class ClosestPositiveNumber {
 
         Double[] a = { 1.0, 2.1, -1.5, 9.2, 30.4, 40.3, -0.5 };
 
-         cl.findClosest(a);
-       
+        cl.findClosest(a);
+
     }
 
 }
