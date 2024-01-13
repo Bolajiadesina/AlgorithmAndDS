@@ -22,14 +22,25 @@ public class ClosestPositiveNumber {
         double latest = 0;
 
         for (int i = 0; i < a.length; i++) {
-           
-            if (Math.abs(a[i]) > Math.abs(0.0)) {
+            logger.info("i1 " + a[i]);
 
-                if (Math.abs(a[i]) < latest) {
+            if ((a[i]) > (0)) {
+                
+
+
+                logger.info("got here for: " + a[i]);
+                if ((a[i]) < latest) {
+                    logger.info("got again here for: " + a[i]);
+                    logger.info("++++++++++++++++++++++ ");
                     result = a[i];
-                    latest = result;
+                    
+                    //#endregion
+
+                    
                 }
 
+            }else{
+               // logger.info("e no enter  for: " + a[i]);
             }
 
             logger.info("result " + result);
