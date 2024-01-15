@@ -24,23 +24,15 @@ public class ClosestPositiveNumber {
         for (int i = 0; i < a.length; i++) {
             logger.info("i1 " + a[i]);
 
-            if ((a[i]) > (0)) {
-                
+            logger.info("got here for: " + a[i]);
+            if ((a[i]) < latest && (a[i]) > (0)) {
+                logger.info("got again here for: " + a[i]);
+                logger.info("++++++++++++++++++++++ ");
+                result = a[i];
+                latest = result;
 
+                // #endregion
 
-                logger.info("got here for: " + a[i]);
-                if ((a[i]) < latest) {
-                    logger.info("got again here for: " + a[i]);
-                    logger.info("++++++++++++++++++++++ ");
-                    result = a[i];
-                    
-                    //#endregion
-
-                    
-                }
-
-            }else{
-               // logger.info("e no enter  for: " + a[i]);
             }
 
             logger.info("result " + result);
