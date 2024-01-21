@@ -10,7 +10,7 @@ public class CheckPalindrome {
             for(int i=word.length()-1; i>=0; i--){
 
                rev= rev+word.charAt(i);
-               System.out.println(rev);
+              
                
             }
 
@@ -36,7 +36,7 @@ public class CheckPalindrome {
 
 
     public static void main(String[] args) {
-        //System.out.println(check());
+        System.out.println(check());
         test();
     }
 
