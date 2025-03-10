@@ -1,7 +1,7 @@
 
 package play;
 
-public class AddString {
+public class TwoPointer {
 
     public static String mergeAlternately(String word1, String word2) {
 
