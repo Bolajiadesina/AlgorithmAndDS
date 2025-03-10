@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MaximumCandies {
-    public  static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+    public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         
 
         int maxCandy=extraCandies;
@@ -22,7 +22,7 @@ public class MaximumCandies {
                 candyArray.add(candyStatus);
             }
 
-            System.out.println(candyArray.toString());
+            
 
             return candyArray;
     }
