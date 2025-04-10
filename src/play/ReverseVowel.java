@@ -8,49 +8,39 @@ import java.util.Map;
 public class ReverseVowel {
     public static String reverseVowels() {
         String s = "IceCreAm";
+        char[] chars = s.toCharArray();
+        int left = 0;
+        int right = chars.length - 1;
         String vowels = "aeiouAEIOU";
-        String reverseWord = "";
-
-        char[] splitWord = s.toCharArray();
-        char[] vowelSplit = vowels.toCharArray();
         
-        List<Integer> spl = new ArrayList<>();
-        List<Character> vow = new ArrayList<>();
-        List<Character> vow2 = new ArrayList<>();
-
-        
-        
-                for (int i = 0; i < splitWord.length; i++) {
-        
-                    for (int j = 0; j < vowelSplit.length; j++) {
-        
-                        if (vowelSplit[j] == splitWord[i]) {    
-                            spl.add(i);
-                            vow.add(vowelSplit[j]);
-                        }
-                    }
-                }
-
-              
-        
-                for(int k=splitWord.length-1; k>=0;k-- ){
-                    for(int l=spl.size()-1; l>=0;l--){
-                        for(int n=vow.size()-1 ;n>=0; n--){}
-                        if(spl[l]==splitWord[k]){}
-                       vow2.add(splitWord[k]);
-
-                    }
-                   
-        
-                }
-        
-                return reverseWord;
+        while (left < right) {
+            // Find the next vowel from the left
+            while (left < right && vowels.indexOf(chars[left]) == -1) {
+                left++;
             }
+            
+            // Find the next vowel from the right
+            while (left < right && vowels.indexOf(chars[right]) == -1) {
+                right--;
+            }
+            
+            // Swap the vowels
+            if (left < right) {
+                char temp = chars[left];
+                chars[left] = chars[right];
+                chars[right] = temp;
+                left++;
+                right--;
+            }
+        }
         
-          
-        
-            public static void main(String[] args) {
-        System.out.println(reverseVowels()); ;
+        return new String(chars);
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverseVowels());
+        ;
     }
 
 }
