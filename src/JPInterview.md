@@ -50,7 +50,7 @@
     Java Stream API and lamba Example with removing a employee from List starting with name 'a' 
     Given an integer, print the integer with the order of digits reversed.
     fibonacci secuence 
-    Medium Leetcode on Binary Trees
+    Medium Leetcode on Binary Trees --
     coding challenges included decoding numbers,
     fibonnaci sequence then videos explaining thought process. 
     Sting manipulation, capitalize every first word in a sentence
