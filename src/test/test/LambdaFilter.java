@@ -278,10 +278,12 @@ public class LambdaFilter {
         int[] sorta = { 1, 5, 7, 4, 3, 6, 2, 8, 9 };
 
         Arrays.sort(sorta);
-        // for ( Integer i : sorta) {
-        // System.out.println(i);
-        // }
+        for ( Integer i : sorta) {
+        System.out.println(i);
+        }
 
+
+        //get odd numbers
         int[] newArray = Arrays.stream(sorta).filter(m -> m % 2 != 0).toArray();
         for (Integer i : newArray) {
             System.out.println(i);
@@ -333,8 +335,8 @@ public class LambdaFilter {
 
         // System.out.println(generateAngleBracketSequences(3));
         // bizzBuzz();
-        //sortPositive();
-        fibonnacci(20);
+        sortPositive();
+        //fibonnacci(20);
     }
 
 }

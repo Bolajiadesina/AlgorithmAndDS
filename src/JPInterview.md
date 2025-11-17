@@ -47,22 +47,23 @@
     How to write a spring mvc project.
 
 3) Merge the intervals and Count binary strings 
-    Java Stream API and lamba Example with removing a employee from List starting with name 'a' 
-    Given an integer, print the integer with the order of digits reversed.
-    fibonacci secuence 
-    Medium Leetcode on Binary Trees --
-    coding challenges included decoding numbers,
-    fibonnaci sequence then videos explaining thought process. 
-    Sting manipulation, capitalize every first word in a sentence
-    sort a huge array of numbers with a max number is 101
-    How to combine two sorted lists.
-    Given an array of numbers, find the minimum no. of swaps between positions required to sort the array in increasing order. 
-    snake ladders game design
-    One problem was on string with contructing palindrome in the string(Easy). 
-    Second problem was a sliding window problem(Medium). 
-    number of ways to decode number list 
-    Reverse string Post order binary tree
-    Simple sorting algorithm.
+    Java Stream API and lamba Example with removing a employee from List starting with name 'a' XX
+    Given an integer, print the integer with the order of digits reversed. XX
+    fibonacci secuence XX
+    Medium Leetcode on Binary Trees ==
+    coding challenges included decoding numbers, ==
+    fibonnaci sequence then videos explaining thought process.  XX
+    Sting manipulation, capitalize every first word in a sentence XX
+    sort a huge array of numbers with a max number is 101 XX
+    How to combine two sorted lists. XX
+    Given an array of numbers, find the minimum no. of swaps between positions required to sort the array in increasing order.  XX
+    snake ladders game design*
+    One problem was on string with contructing palindrome in the string(Easy).  XX
+    Second problem was a sliding window problem(Medium). ==
+    number of ways to decode number list ==
+    Reverse string. XX
+    Post order binary tree--
+    Simple sorting algorithm XX
     Given an input of parentheses, determine if the input is well-formed and valid 
     implement stl vector
     Write the algorithm for factorial
