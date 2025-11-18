@@ -45,6 +45,8 @@
     What are java collections? 
     Exception handling and simple ques.
     How to write a spring mvc project.
+    Write merge sort algorithm and explain its time complexity
+     DBMS transactions
 
 3) Merge the intervals and Count binary strings 
     Java Stream API and lamba Example with removing a employee from List starting with name 'a' XX
@@ -64,17 +66,16 @@
     Reverse string. XX
     Post order binary tree--
     Simple sorting algorithm XX
-    Given an input of parentheses, determine if the input is well-formed and valid 
+    Given an input of parentheses, determine if the input is well-formed and valid XX
     implement stl vector
-    Write the algorithm for factorial
-    find middle node of a singly linked list
-    Reverse string without inbuilt function
-    Given a string, replace alphabet to lowercase, skip special character, and if found number than replace it with 10-num. 
-    Given a red black tree. Every node contains left, right node. Store node info in some data structure and search the node in DS and get left right node
-    Sql questions - What are indexes? Given two tables. How to write join query based on some conditions.
-    Given two array list. Print the unique numbers. a1= {1,2,3,4) a2= {2,3,5,6} o/p- {1.2.3.4.5.6}
-    Write merge sort algorithm and explain its time complexity
-    DBMS transactions
+    Write the algorithm for factorial--
+    find middle node of a singly linked list  XX
+    Reverse string without inbuilt function     XX
+    Given a string, replace alphabet to lowercase, skip special character, and if found number than replace it with 10-num. XX
+    Given a red black tree. Every node contains left, right node. Store node info in some data structure and search the node in DS and get left right node--
+    Sql questions - What are indexes? Given two tables. How to write join query based on some conditions.--
+    Given two array list. Print the unique numbers. a1= {1,2,3,4) a2= {2,3,5,6} o/p- {1.2.3.4.5.6} XX
+   
     Given a string, sort its words
     You have a three gallon bucket and a five gallon bucket, how do you get four gallons?
     The reverse and add function starts with a number, reverses its digits, and adds the reverse to the original. If the sum is not a palindrome, repeat this procedure until it does. Write a program that takes number as a string and gives the resulting palindrome (if one exists). If it took more than 1,000 iterations (additions) or yield a palindrome that is greater than 4,294,967,295, assume that no palindrome exist for the given number. The output should be the number of additions performed and the end number.

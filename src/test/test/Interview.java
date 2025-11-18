@@ -7,8 +7,11 @@ import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.Stack;
 import java.util.stream.Collector;
+
+import org.w3c.dom.Node;
 
 public class Interview {
 
@@ -160,18 +163,6 @@ public class Interview {
         return stackName.isEmpty() ? true : false;
     }
 
-    public static void main(String[] args) {
-        // System.out.println(removeAlpha());
-        // System.out.println(reverseDigits());
-        // System.out.println(fibonnacci());
-        // System.out.println(capitalizedString());
-        // sortLimitedRange();
-        // combineTwoLists();
-        // reverseStr();
-        System.out.println(areBracketsProperlyMatched("if (a[0] > b[1]) {doSomething(); }"));
-
-    }
-
     public boolean areBracketsProperlyMatched2(String cString) {
 
         Map<Character, Character> newHasMap = new HashMap<>();
@@ -182,19 +173,124 @@ public class Interview {
         Stack<Character> stackValue = new Stack<>();
 
         for (char ch : cString.toCharArray()) {
-            if (newHasMap.containsValue(ch)) {
-                stackValue.push(ch);
-            } else if (stackValue.isEmpty()) {
 
-                if (newHasMap.containsKey(ch) || stackValue.pop() != newHasMap.get(ch)) {
-                    return false;
+            // If opening bracket, push to stack
+            if (newHasMap.containsKey(ch)) {
+                stackValue.push(ch);
+            }
+            // If closing bracket
+            else if (newHasMap.containsValue(ch)) {
+
+                if (stackValue.isEmpty()) {
+                    return false; // no opening bracket available
                 }
 
+                char top = stackValue.pop();
+                if (newHasMap.get(top) != ch) {
+                    return false; // mismatch
+                }
             }
+        }
+
+        return stackValue.isEmpty();
+    }
+
+    static class Node {
+        int value;
+        Node next;
+
+        Node(int value) {
+            this.value = value;
+            this.next = null;
+        }
+    }
+
+    public static Node findMiddle(Node head) {
+        if (head == null)
+            return null;
+
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next; // move 1 step
+            fast = fast.next.next; // move 2 steps
+        }
+
+        return slow; // slow is now the middle
+    }
+
+    public static void freRev() {
+        String ft = "tyhgf";
+        String giter = "";
+
+        for (int i = ft.length() - 1; i >= 0; i--) {
+            giter += ft.charAt(i);
 
         }
-        System.out.println(stackValue);
 
-        return stackValue.isEmpty()? true: false;
+        System.out.println(giter);
+
+    }
+
+    public static void manipulate(){
+        String input="Ab#3D9!x@0";
+        String greta="";
+        char [] inputRev= input.toCharArray();
+            for (int i = 0; i < inputRev.length; i++) {
+                if(Character.isLetter (inputRev[i])){
+                    greta+=Character.toLowerCase(inputRev[i]);
+                }
+                else if (Character.isDigit(inputRev[i])){
+                    int diff=0;
+                    diff=10 -(Integer.parseInt(String.valueOf(inputRev[i])));
+                    greta+=diff;
+                }else{
+                    continue;
+                }
+                          
+            }
+
+            System.out.println(greta.toString());
+    }
+
+
+    public static void uniqueNumb(){
+        int [] a1= {1,2,3,4}, a2= {2,3,5,6};
+        List<Integer> newArrIntegers= new ArrayList<>();
+          for (int i : a1) {
+            newArrIntegers.add(i);
+        }
+        for (int i : a2) {
+            newArrIntegers.add(i);
+        }
+        Set<Integer> sentence= new LinkedHashSet<>(newArrIntegers);
+
+        System.out.println(sentence);
+    }
+
+    public static void main(String[] args) {
+        // System.out.println(removeAlpha());
+        // System.out.println(reverseDigits());
+        // System.out.println(fibonnacci());
+        // System.out.println(capitalizedString());
+        // sortLimitedRange();
+        // combineTwoLists();
+        // reverseStr();
+        // System.out.println(areBracketsProperlyMatched("if (a[0] > b[1])
+        // {doSomething(); }"));
+        // Node head = new Node(1);
+        // head.next = new Node(2);
+        // head.next.next = new Node(3);
+        // head.next.next.next = new Node(4);
+        // head.next.next.next.next = new Node(5);
+
+        // Node middle = findMiddle(head);
+
+        // System.out.println("Middle node value: " + middle.value);
+
+        //freRev();
+        //manipulate();
+        uniqueNumb();
     }
 }
