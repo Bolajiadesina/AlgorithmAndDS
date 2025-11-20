@@ -205,7 +205,7 @@ public class Interview {
         }
     }
 
-    public static Node findMiddle(Node head) {
+    static Node findMiddle(Node head) {
         if (head == null)
             return null;
 
@@ -220,7 +220,7 @@ public class Interview {
         return slow; // slow is now the middle
     }
 
-    public static void freRev() {
+    static void freRev() {
         String ft = "tyhgf";
         String giter = "";
 
@@ -233,40 +233,91 @@ public class Interview {
 
     }
 
-    public static void manipulate(){
-        String input="Ab#3D9!x@0";
-        String greta="";
-        char [] inputRev= input.toCharArray();
-            for (int i = 0; i < inputRev.length; i++) {
-                if(Character.isLetter (inputRev[i])){
-                    greta+=Character.toLowerCase(inputRev[i]);
-                }
-                else if (Character.isDigit(inputRev[i])){
-                    int diff=0;
-                    diff=10 -(Integer.parseInt(String.valueOf(inputRev[i])));
-                    greta+=diff;
-                }else{
-                    continue;
-                }
-                          
+    static void manipulate() {
+        String input = "Ab#3D9!x@0";
+        String greta = "";
+        char[] inputRev = input.toCharArray();
+        for (int i = 0; i < inputRev.length; i++) {
+            if (Character.isLetter(inputRev[i])) {
+                greta += Character.toLowerCase(inputRev[i]);
+            } else if (Character.isDigit(inputRev[i])) {
+                int diff = 0;
+                diff = 10 - (Integer.parseInt(String.valueOf(inputRev[i])));
+                greta += diff;
+            } else {
+                continue;
             }
 
-            System.out.println(greta.toString());
+        }
+
+        System.out.println(greta.toString());
     }
 
-
-    public static void uniqueNumb(){
-        int [] a1= {1,2,3,4}, a2= {2,3,5,6};
-        List<Integer> newArrIntegers= new ArrayList<>();
-          for (int i : a1) {
+    static void uniqueNumb() {
+        int[] a1 = { 1, 2, 3, 4 }, a2 = { 2, 3, 5, 6 };
+        List<Integer> newArrIntegers = new ArrayList<>();
+        for (int i : a1) {
             newArrIntegers.add(i);
         }
         for (int i : a2) {
             newArrIntegers.add(i);
         }
-        Set<Integer> sentence= new LinkedHashSet<>(newArrIntegers);
+        Set<Integer> sentence = new LinkedHashSet<>(newArrIntegers);
 
         System.out.println(sentence);
+    }
+
+    /**
+     * Ignore punctuation completely.
+     * 
+     * Treat uppercase and lowercase as equal when sorting, but preserve the
+     * original casing in the final output.
+     * 
+     * Numbers inside the string should be sorted as numbers, not strings (e.g., 2
+     * comes before 10).
+     * 
+     * Return the sorted words separated by a single space.
+     * 
+     * If two words are identical ignoring case, preserve the original input order
+     * (stable sort).
+     * @param <T>
+     */
+    static  void sortStringAdvance() {
+        String complexString = "Hello, world! 10 apples and 2 Oranges.";
+
+        // "2 apples and 10 Hello Oranges world"
+        List<Object> very = new ArrayList<>();
+
+        String[] newWord = complexString.split("\\s");
+        for (int i = 0; i < newWord.length; i++) {
+            System.out.println(newWord[i]);
+            if (Character.isLetter(newWord[i].charAt(0))) {
+                if (!Character.isLetter(newWord[i].charAt(newWord[i].length() - 1))) {
+                    very.add((newWord[i].substring(0, newWord[i].length() - 1)).toLowerCase());
+                } else {
+                    very.add(newWord[i].toLowerCase());
+                }
+            }
+
+            if (!Character.isLetter((newWord[i].charAt(0)))) {
+                very.add(Integer.parseInt(newWord[i]));
+            }
+        }
+
+
+        Set<Object> newSet = new LinkedHashSet<>(very);
+        System.out.println(newSet.toString());
+
+    }
+
+    private static boolean reverseNum(int input) {
+        int rev = 0;
+        int num=input;
+        while (num > 0) {
+            rev = rev * 10 + (num % 10);
+            num /= 10;
+        }
+        return rev==input;
     }
 
     public static void main(String[] args) {
@@ -289,8 +340,10 @@ public class Interview {
 
         // System.out.println("Middle node value: " + middle.value);
 
-        //freRev();
-        //manipulate();
-        uniqueNumb();
+        // freRev();
+        // manipulate();
+        // uniqueNumb();
+        //sortStringAdvance();
+        System.out.println(reverseNum(4884));
     }
 }

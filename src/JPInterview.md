@@ -76,9 +76,10 @@
     Sql questions - What are indexes? Given two tables. How to write join query based on some conditions.--
     Given two array list. Print the unique numbers. a1= {1,2,3,4) a2= {2,3,5,6} o/p- {1.2.3.4.5.6} XX
    
-    Given a string, sort its words
+    Given a string, sort its words XX--
     You have a three gallon bucket and a five gallon bucket, how do you get four gallons?
-    The reverse and add function starts with a number, reverses its digits, and adds the reverse to the original. If the sum is not a palindrome, repeat this procedure until it does. Write a program that takes number as a string and gives the resulting palindrome (if one exists). If it took more than 1,000 iterations (additions) or yield a palindrome that is greater than 4,294,967,295, assume that no palindrome exist for the given number. The output should be the number of additions performed and the end number.
+    The reverse and add function starts with a number, reverses its digits, and adds the reverse to the original. If the sum is not a palindrome, repeat this procedure until it does.
+    Write a program that takes number as a string and gives the resulting palindrome (if one exists). If it took more than 1,000 iterations (additions) or yield a palindrome that is greater than 4,294,967,295, assume that no palindrome exist for the given number. The output should be the number of additions performed and the end number.
     Find the minimum number of coins needed to make an amount of change given coins = 1, 3, 5 
     Explain how a binary search is done
     KMP algorithm
